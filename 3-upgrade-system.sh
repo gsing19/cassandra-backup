@@ -22,9 +22,9 @@ cqlsh -e "SELECT key, cluster_name, data_center, rack from system.local;"
 #----------------------------------------------------------------------------------------#
 # Upgrade System Tables
 #----------------------------------------------------------------------------------------#
-cqlsh -e "UPDATE system.local set cluster_name = 'J4U Prod Cluster' WHERE key ='local';"
-cqlsh -e "UPDATE system.local set data_center='bkpanly' WHERE key ='local';"
-cqlsh -e "UPDATE system.local set rack = 'FD0' WHERE key ='local';"
+cqlsh -e "UPDATE system.local set cluster_name = '$DESTINATION_CLUSTER' WHERE key ='local';"
+cqlsh -e "UPDATE system.local set data_center='$DESTINATION_DC' WHERE key ='local';"
+cqlsh -e "UPDATE system.local set rack = '$DESTINATION_RACK' WHERE key ='local';"
 #----------------------------------------------------------------------------------------#
 cqlsh -e "SELECT key, cluster_name, data_center, rack from system.local;"
 #----------------------------------------------------------------------------------------#
