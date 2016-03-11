@@ -14,6 +14,8 @@ sed -i 's/$DESTINATION_CLUSTER/$SOURCE_CLUSTER/' /etc/dse/cassandra/cassandra.ya
 sed -i 's/$DESTINATION_DC/$SOURCE_DC/'  /etc/dse/cassandra/cassandra-rackdc.properties
 sed -i 's/$DESTINATION_RACK/$SOURCE_RACK/'  /etc/dse/cassandra/cassandra-rackdc.properties
 #----------------------------------------------------------------------------------------#
+service dse restart
+#----------------------------------------------------------------------------------------#
 cqlsh -e "SELECT key, cluster_name, data_center, rack from system.local;"
 #----------------------------------------------------------------------------------------#
 cqlsh -e "UPDATE system.local set cluster_name = 'J4U Prod Cluster' WHERE key ='local';"
