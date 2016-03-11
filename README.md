@@ -6,3 +6,12 @@ Cassandra Data Directory Backup/Restore
   * ls -l /user/share/dse
 * 2-update-system.sh - Update Cassandra yaml files and system tables
 * 3-delete-peers.sh - Delete peers
+
+### Aliases
+
+```
+$ vi ~/.bash_aliases
+  alias 1='tail -100f /var/log/cassandra/output.log'
+  alias 2='tail -100f /var/log/cassandra/system.log'
+```
+
