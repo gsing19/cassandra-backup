@@ -7,7 +7,7 @@ Cassandra Data Directory Backup/Restore
 * 2-update-system.sh - Update Cassandra yaml files and system tables
 * 3-delete-peers.sh - Delete peers
 
-### Aliases
+### Bash Aliases 
 
 ```
 $ vi ~/.bash_aliases
