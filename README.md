@@ -11,7 +11,7 @@ Cassandra Data Directory Backup/Restore
 
 ```
 $ vi ~/.bash_aliases
-  alias 1='tail -100f /var/log/cassandra/output.log'
-  alias 2='tail -100f /var/log/cassandra/system.log'
+  alias 1='tail -50f /var/log/cassandra/output.log'
+  alias 2='tail -50f /var/log/cassandra/system.log'
 ```
 
